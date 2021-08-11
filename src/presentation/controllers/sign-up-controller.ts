@@ -6,5 +6,12 @@ export class SignUpController {
         body: new Error('No name is provided')
       }
     }
+
+    if (!httpRequest.body.email) {
+      return {
+        statusCode: 400,
+        body: new Error('No email is provided')
+      }
+    }
   }
 }
