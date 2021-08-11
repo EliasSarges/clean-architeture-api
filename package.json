@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "husky install",
-    "test": "jest",
-    "test:staged": "jest"
+    "test": "jest --watch",
+    "test:staged": "jest --passWithNoTests"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
