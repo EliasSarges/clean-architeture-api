@@ -2,7 +2,7 @@ import { HttpRequest, HttpResponse } from './protocols/http'
 import { MissingParameterError } from './errors/missing-param-errors'
 import { BadRequest } from './helpers/http-helper'
 export class SignUpController {
-  handle (httpRequest: HttpRequest): HttpResponse {
+  handle (httpRequest: HttpRequest): HttpResponse | undefined {
     const requireFields = ['name', 'email']
 
     for (const field of requireFields) {
@@ -10,6 +10,5 @@ export class SignUpController {
         return BadRequest(new MissingParameterError(field))
       }
     }
-    return BadRequest(new Error('body is not provided'))
   }
 }
