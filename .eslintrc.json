@@ -4,14 +4,6 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "always",
-        "named": "always",
-        "asyncArrow": "always"
-      }
-    ]
+    "@typescript-eslint/strict-boolean-expressions": "off"
   }
 }
