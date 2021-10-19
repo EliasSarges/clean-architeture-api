@@ -1,17 +1,5 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  roots: ['<rootDir>/src'],
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  coverageDirectory: 'coverage',
-  testEnvironment: 'node',
-  clearMocks: true,
-  collectCoverage: true,
-  coverageProvider: 'v8',
-  transform: {
-    '.+\\.ts$': 'ts-jest'
-  }
+  preset: 'ts-jest',
+  testEnvironment: 'node'
 }
