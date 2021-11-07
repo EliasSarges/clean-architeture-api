@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "husky install",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:verbose": "jest --passWithNoTests",
+    "test:unit": "yarn test -- --watch"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
