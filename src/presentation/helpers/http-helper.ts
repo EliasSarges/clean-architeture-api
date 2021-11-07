@@ -14,3 +14,10 @@ export function ServerError (): HttpResponse {
     body: new InternalServerError()
   }
 }
+
+export function Created (data: any): HttpResponse {
+  return {
+    statusCode: 201,
+    body: data
+  }
+}
