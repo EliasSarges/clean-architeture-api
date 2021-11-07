@@ -6,9 +6,11 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "husky install",
-    "test": "jest --passWithNoTests --silent --noStackTrace",
-    "test:verbose": "jest --passWithNoTests",
-    "test:unit": "yarn test -- --watch"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "yarn test -- --watch -c jest-unit-config.js",
+    "test:integration": "yarn test -- --watch -c jest-integration-config.js",
+    "test:staged": "yarn test -- --findRelatedTests"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
